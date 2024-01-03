@@ -1,0 +1,20 @@
+apiVersion: veecode.backstage.io/v1alpha1
+kind: Cluster
+metadata:
+  name: "teste-prometheus-overview-3"
+  environment:
+    cluster_type: eks
+    domain: 'apps.vkpr.net'
+  annotations:
+    github.com/project-slug: veecode-bot/teste-prometheus-overview-3
+    backstage.io/techdocs-ref: dir:.
+    github.com/workflows: terraform-deploy.yml,terraform-destroy.yml
+    veecode/cluster-name: teste-prometheus-overview-3
+    github.com/workflows: terraform-deploy.yml,terraform-destroy.yml
+    grafana/tag-selector: teste-prometheus-overview-3
+    grafana/alert-label-selector: "alertname=teste-prometheus-overview-3"
+spec:
+  type: devops
+  lifecycle: experimental
+  owner: "group:default/admin"
+  
